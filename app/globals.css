@@ -1,0 +1,69 @@
+/* File: globals.css (or styles/globals.css) */
+@import "tailwindcss";
+
+:root {
+  --background: #151b33; /* The core color of the image */
+  --foreground: #ffffff;
+  --card: #18181b;
+  --card-strong: #0f1224;
+  --muted: #a1a1aa;
+  --border: rgba(255, 255, 255, 0.12);
+  --accent: #4d7cff;
+  --accent-2: #7c3aed;
+  --gold: #d4af37;
+  --ring: rgba(77, 124, 255, 0.35);
+}
+
+html {
+  height: 100%;
+  background: var(--background);
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+
+  /* MODIFIED: Replaced complex radial and linear gradients
+     with a single solid color from the variable, matching the image. */
+  background: var(--background);
+
+  color: var(--foreground);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Standard Boilerplate (Kept for functionality) --- */
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(77, 124, 255, 0.35);
+  color: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.input {
+  @apply w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10
+  text-sm text-white placeholder:text-white/40
+  focus:outline-none focus:border-[#6C8CFF]/60
+  transition;
+}
