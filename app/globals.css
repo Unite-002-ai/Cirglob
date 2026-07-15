@@ -1,0 +1,141 @@
+/* File: globals.css (or styles/globals.css) */
+@import "tailwindcss";
+
+:root {
+  --background: #151b33;
+  --foreground: #ffffff;
+  --card: #18181b;
+  --card-strong: #0f1224;
+  --muted: #a1a1aa;
+  --border: rgba(255, 255, 255, 0.12);
+  --accent: #4d7cff;
+  --accent-2: #7c3aed;
+  --gold: #d4af37;
+  --ring: rgba(77, 124, 255, 0.35);
+  color-scheme: dark;
+}
+
+html,
+body,
+#__next {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+  background: #05060a;
+
+  /* Allow normal page scrolling */
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  overscroll-behavior: none;
+
+  /* Hide scrollbar while keeping scrolling */
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+
+body {
+  color: white;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ------------------------------------------------ */
+/* Standard Boilerplate */
+/* ------------------------------------------------ */
+
+* {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+::selection {
+  background: rgba(77, 124, 255, 0.35);
+  color: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.input {
+  @apply w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-all duration-200;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+}
+
+.input:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.input:focus {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+}
+
+/* ------------------------------------------------ */
+/* Hide scrollbars everywhere while keeping scroll */
+/* ------------------------------------------------ */
+
+.scrollbar-hide,
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+.scrollbar-hide::-webkit-scrollbar-thumb,
+.no-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar-track,
+.no-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Hide the global page scrollbar but keep scrolling */
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#__next::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+html,
+body,
+#__next {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
